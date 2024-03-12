@@ -1,5 +1,4 @@
-import background from './background.jpg'
-import benefitImage2 from './benefits/image-2.png'
+
 
 import gradient from './gradient.png'
 import curve from './hero/curve.png'
@@ -20,8 +19,7 @@ import twitter from './socials/twitter.svg'
 import logo from './yourlogo.svg'
 
 export {
-  background,
-  benefitImage2,
+
   curve,
   discordBlack,
   facebook,

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { socials } from '../constants'
 
 import Section from './section'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -12,13 +13,13 @@ const Footer = () => {
 
         <ul className='flex flex-wrap gap-5'>
           {socials.map(item => (
-            <a
+            <Link
               key={item.id}
               href={item.url}
               target='_blank'
               className='flex size-10 items-center justify-center rounded-full bg-n-7 transition-colors hover:bg-n-6'>
               <Image src={item.iconUrl} width={16} height={16} alt={item.title} />
-            </a>
+            </Link>
           ))}
         </ul>
       </div>

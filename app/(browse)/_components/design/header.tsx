@@ -1,6 +1,6 @@
+import { robot } from '@/public/assets'
 import Image from 'next/image'
 
-import { background } from '@/public/assets'
 
 export const Rings = () => {
   return (
@@ -36,7 +36,7 @@ export const HamburgerMenu = () => {
       <div className='absolute inset-0 opacity-[.03]'>
         <Image
           className='size-full object-cover'
-          src={background}
+          src={robot}
           width={688}
           height={953}
           alt='Background'

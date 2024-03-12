@@ -19,7 +19,9 @@ const buttonVariants = cva(
         galaxy:
           'relative galaxy-button border border-white text-white hover:border-purple-400 hover:text-white bg-transparent hover:bg-purple-500 hover:bg-opacity-10',
         glass:
-          'bg-white/30 backdrop-filter backdrop-blur-sm hover:bg-white/40 border border-gray-200 text-white hover:border-gray-300 transition duration-150 ease-in-out shadow-sm hover:shadow-md rounded-md'
+          'bg-white/30 backdrop-filter backdrop-blur-sm hover:bg-white/40 border border-gray-200 text-white hover:border-gray-300 transition duration-150 ease-in-out shadow-sm hover:shadow-md rounded-md',
+        dotted:
+          'rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none'
       },
       size: {
         default: 'h-10 px-4 py-2',
