@@ -2,6 +2,7 @@ import React, { ReactNode, useEffect, useState } from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, BarChart2, ChevronDown, Home, PieChart } from 'lucide-react'
+import VerticalAccordion from '../vertical-accordion'
 
 export const Tabs = () => {
   const [selected, setSelected] = useState<number | null>(null)
@@ -48,7 +49,7 @@ const Tab = ({
       id={`shift-tab-${tab}`}
       onMouseEnter={() => handleSetSelected(tab)}
       onClick={() => handleSetSelected(tab)}
-      className={`flex items-center gap-1 px-6 py-7.5 text-md transition-colors ${
+      className={`flex items-center gap-1 px-6 py-7.5 font-bold text-md transition-colors ${
         selected === tab ? ' bg-neutral-800 text-neutral-200' : 'text-neutral-100'
       }`}>
       <span>{children}</span>
@@ -138,45 +139,7 @@ const Nub = ({ selected }: { selected: number | null }) => {
 const Platform = () => {
   return (
     <div>
-      <div className='flex gap-4'>
-        <div>
-          <h3 className='mb-2 text-sm font-medium'>Startup</h3>
-          <a href='#' className='mb-1 block text-sm text-neutral-400'>
-            Bookkeeping
-          </a>
-          <a href='#' className='block text-sm text-neutral-400'>
-            Invoicing
-          </a>
-        </div>
-        <div>
-          <h3 className='mb-2 text-sm font-medium'>Scaleup</h3>
-          <a href='#' className='mb-1 block text-sm text-neutral-400'>
-            Live Coaching
-          </a>
-          <a href='#' className='mb-1 block text-sm text-neutral-400'>
-            Reviews
-          </a>
-          <a href='#' className='block text-sm text-neutral-400'>
-            Tax/VAT
-          </a>
-        </div>
-        <div>
-          <h3 className='mb-2 text-sm font-medium'>Enterprise</h3>
-          <a href='#' className='mb-1 block text-sm text-neutral-400'>
-            White glove
-          </a>
-          <a href='#' className='mb-1 block text-sm text-neutral-400'>
-            SOX Compliance
-          </a>
-          <a href='#' className='block text-sm text-neutral-400'>
-            Staffing
-          </a>
-          <a href='#' className='block text-sm text-neutral-400'>
-            More
-          </a>
-        </div>
-      </div>
-
+      <VerticalAccordion />
       <button className='ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300'>
         <span>View more</span>
         <ArrowRight />
@@ -187,25 +150,12 @@ const Platform = () => {
 
 const Teams = () => {
   return (
-    <div className='grid grid-cols-3 gap-4 divide-x divide-neutral-700'>
-      <a
-        href='#'
-        className='flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50'>
-        <Home className='mb-2 text-xl text-indigo-300' />
-        <span className='text-xs'>Startup</span>
-      </a>
-      <a
-        href='#'
-        className='flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50'>
-        <BarChart2 className='mb-2 text-xl text-indigo-300' />
-        <span className='text-xs'>Scaleup</span>
-      </a>
-      <a
-        href='#'
-        className='flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50'>
-        <PieChart className='mb-2 text-xl text-indigo-300' />
-        <span className='text-xs'>Enterprise</span>
-      </a>
+    <div>
+      <VerticalAccordion />
+      <button className='ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300'>
+        <span>View more</span>
+        <ArrowRight />
+      </button>
     </div>
   )
 }
@@ -213,30 +163,7 @@ const Teams = () => {
 const Resources = () => {
   return (
     <div>
-      <div className='grid grid-cols-2 gap-2'>
-        <a href='#'>
-          <img
-            className='mb-2 h-14 w-full rounded object-cover'
-            src='/imgs/blog/4.png'
-            alt='Placeholder image'
-          />
-          <h4 className='mb-0.5 text-sm font-medium'>Lorem ipsum dolor</h4>
-          <p className='text-xs text-neutral-400'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo quidem eos.
-          </p>
-        </a>
-        <a href='#'>
-          <img
-            className='mb-2 h-14 w-full rounded object-cover'
-            src='/imgs/blog/5.png'
-            alt='Placeholder image'
-          />
-          <h4 className='mb-0.5 text-sm font-medium'>Lorem ipsum dolor</h4>
-          <p className='text-xs text-neutral-400'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo quidem eos.
-          </p>
-        </a>
-      </div>
+      <VerticalAccordion />
       <button className='ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300'>
         <span>View more</span>
         <ArrowRight />
@@ -247,31 +174,34 @@ const Resources = () => {
 
 const Pricing = () => {
   return (
-    <div>
-      <div className='grid grid-cols-2 gap-2'>
-        <a href='#'>
-          <img
-            className='mb-2 h-14 w-full rounded object-cover'
-            src='/imgs/blog/4.png'
-            alt='Placeholder image'
-          />
-          <h4 className='mb-0.5 text-sm font-medium'>Lorem ipsum dolor</h4>
-          <p className='text-xs text-neutral-400'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo quidem eos.
-          </p>
-        </a>
-        <a href='#'>
-          <img
-            className='mb-2 h-14 w-full rounded object-cover'
-            src='/imgs/blog/5.png'
-            alt='Placeholder image'
-          />
-          <h4 className='mb-0.5 text-sm font-medium'>Lorem ipsum dolor</h4>
-          <p className='text-xs text-neutral-400'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo quidem eos.
-          </p>
-        </a>
+    <div className=' bg-white p-6 shadow-xl'>
+      <div className='flex justify-around'>
+        <div className='mb-3 space-y-3'>
+          <h3 className='font-semibold'>For Individuals</h3>
+          <a href='#' className='block text-sm hover:underline'>
+            Introduction
+          </a>
+          <a href='#' className='block text-sm hover:underline'>
+            Pay as you go
+          </a>
+        </div>
+        <div className='mb-6 space-y-3'>
+          <h3 className='font-semibold'>For Companies</h3>
+          <a href='#' className='block text-sm hover:underline'>
+            Startups
+          </a>
+          <a href='#' className='block text-sm hover:underline'>
+            SMBs
+          </a>
+          <a href='#' className='block text-sm hover:underline'>
+            Enterprise
+          </a>
+        </div>
       </div>
+      <button className='w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white'>
+        Contact sales
+      </button>
+
       <button className='ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300'>
         <span>View more</span>
         <ArrowRight />

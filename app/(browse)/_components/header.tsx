@@ -11,7 +11,6 @@ import { AnimatedHamburgerButton } from '@/public/assets/svg/MenuSvg'
 import { navigation } from '../constants'
 
 import { HamburgerMenu } from './design/header'
-import { NavbarV2 } from './design/NavV2'
 import { Tabs } from './design/tabs'
 
 const Header = () => {
