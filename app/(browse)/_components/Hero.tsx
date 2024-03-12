@@ -1,20 +1,20 @@
 'use client'
 
+import Image from 'next/image'
 import { useRef } from 'react'
 import { ScrollParallax } from 'react-just-parallax'
-import Image from 'next/image'
 
 import { curve, heroBackground, robot } from '@/public/assets'
 
-import { heroIcons } from '../constants'
-
-import { BackgroundCircles, BottomLine, Gradient } from './design/Hero'
+import { Button } from '@/components/ui/button'
+import { Cuboid, FileText, Home, PlusSquare, Search } from 'lucide-react'
 import CompanyLogos from './CompanyLogos'
 import Generating from './Generating'
 import Notification from './Notification'
-import Section from './section'
 import { CardContainer } from './design/3d-card'
-import { Button } from '@/components/ui/button'
+import { BackgroundCircles, BottomLine, Gradient } from './design/Hero'
+import Section from './section'
+import { heroIcons } from '../constants'
 
 const Hero = () => {
   const parallaxRef = useRef(null)
@@ -43,9 +43,15 @@ const Hero = () => {
           <p className='mx-auto mb-6 max-w-3xl text-[0.875rem] leading-[1.5rem] text-n-2 md:text-[1rem] md:leading-[1.75rem] lg:mb-8 lg:text-[1.25rem] lg:leading-8'>
             Unleash the power of AI within BrickAI. Upgrade your productivity with BrickAI.
           </p>
-          <Button variant={'galaxy'}>
-            Get started
-          </Button>
+          <div className='flex justify-center items-center'>
+            <Button size='lg' variant='secondary'>
+              Sign up for free
+            </Button>
+            <Cuboid size={28} color='#fff' strokeWidth={3} className='mx-2' />
+            <Button size='lg' variant='glass'>
+              Get a demoooo
+            </Button>
+          </div>
         </div>
 
         <div className='relative mx-auto max-w-[23rem] md:max-w-5xl xl:mb-24'>
@@ -66,11 +72,11 @@ const Hero = () => {
 
                   <ScrollParallax isAbsolutelyPositioned>
                     <ul className='absolute bottom-[7.5rem] left-[-5.5rem] hidden rounded-2xl border border-n-1/10 bg-n-9/40 p-1 backdrop-blur xl:flex'>
-                      {heroIcons.map((icon, index) => (
-                        <li className='p-5' key={index}>
-                          <Image src={icon} width={24} height={25} alt={icon} />
-                        </li>
-                      ))}
+                      <li className='p-5 text-white flex gap-10'>
+                        {heroIcons.map((Icon, index) => (
+                          <Icon.component key={index} />
+                        ))}
+                      </li>
                     </ul>
                   </ScrollParallax>
 

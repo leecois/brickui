@@ -120,7 +120,7 @@ export const MenuItem = ({
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className='relative '>
-      <p className='mx-5 cursor-pointer text-sm font-semibold uppercase text-stone-300 duration-200 hover:scale-110 hover:text-black hover:opacity-[0.9] dark:hover:text-white'>
+      <p className='mx-5 cursor-pointer text-sm font-semibold uppercase text-stone-300 duration-200 hover:scale-110 hover:text-sky-100 hover:opacity-[0.9] dark:hover:text-white'>
         {item}
       </p>
       {active !== null && (
