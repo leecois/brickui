@@ -12,6 +12,7 @@ import { navigation } from '../constants'
 
 import { HamburgerMenu } from './design/header'
 import { NavbarV2 } from './design/NavV2'
+import { Tabs } from './design/tabs'
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false)
@@ -87,7 +88,7 @@ const Header = () => {
         </motion.nav>
 
         <div className='hidden lg:block'>
-          <NavbarV2 />
+          <Tabs />
         </div>
 
         <div className='flex items-center'>

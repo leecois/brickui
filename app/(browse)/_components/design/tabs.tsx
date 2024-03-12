@@ -48,8 +48,8 @@ const Tab = ({
       id={`shift-tab-${tab}`}
       onMouseEnter={() => handleSetSelected(tab)}
       onClick={() => handleSetSelected(tab)}
-      className={`flex items-center gap-1 rounded-full px-3 py-1.5 text-sm transition-colors ${
-        selected === tab ? ' bg-neutral-800 text-neutral-100' : 'text-neutral-400'
+      className={`flex items-center gap-1 px-6 py-7.5 text-md transition-colors ${
+        selected === tab ? ' bg-neutral-800 text-neutral-200' : 'text-neutral-100'
       }`}>
       <span>{children}</span>
       <ChevronDown className={`transition-transform ${selected === tab ? 'rotate-180' : ''}`} />
@@ -73,7 +73,7 @@ const Content = ({ selected, dir }: { selected: number | null; dir: null | 'l' |
         opacity: 0,
         y: 8
       }}
-      className='absolute left-0 top-[calc(100%_+_24px)] w-96 rounded-lg border border-neutral-600 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 p-4'>
+      className='absolute left-0 top-[calc(100%_+_24px)] w-full max-w-[100vw] rounded-lg border border-neutral-600 bg-gradient-to-b from-neutral-200 via-neutral-200 to-neutral-100 p-4'>
       <Bridge />
       <Nub selected={selected} />
 
@@ -130,12 +130,12 @@ const Nub = ({ selected }: { selected: number | null }) => {
       }}
       animate={{ left }}
       transition={{ duration: 0.25, ease: 'easeInOut' }}
-      className='absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-600 bg-neutral-900'
+      className='absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-600 bg-neutral-100'
     />
   )
 }
 
-const Products = () => {
+const Platform = () => {
   return (
     <div>
       <div className='flex gap-4'>
@@ -185,7 +185,7 @@ const Products = () => {
   )
 }
 
-const Pricing = () => {
+const Teams = () => {
   return (
     <div className='grid grid-cols-3 gap-4 divide-x divide-neutral-700'>
       <a
@@ -210,7 +210,42 @@ const Pricing = () => {
   )
 }
 
-const Blog = () => {
+const Resources = () => {
+  return (
+    <div>
+      <div className='grid grid-cols-2 gap-2'>
+        <a href='#'>
+          <img
+            className='mb-2 h-14 w-full rounded object-cover'
+            src='/imgs/blog/4.png'
+            alt='Placeholder image'
+          />
+          <h4 className='mb-0.5 text-sm font-medium'>Lorem ipsum dolor</h4>
+          <p className='text-xs text-neutral-400'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo quidem eos.
+          </p>
+        </a>
+        <a href='#'>
+          <img
+            className='mb-2 h-14 w-full rounded object-cover'
+            src='/imgs/blog/5.png'
+            alt='Placeholder image'
+          />
+          <h4 className='mb-0.5 text-sm font-medium'>Lorem ipsum dolor</h4>
+          <p className='text-xs text-neutral-400'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo quidem eos.
+          </p>
+        </a>
+      </div>
+      <button className='ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300'>
+        <span>View more</span>
+        <ArrowRight />
+      </button>
+    </div>
+  )
+}
+
+const Pricing = () => {
   return (
     <div>
       <div className='grid grid-cols-2 gap-2'>
@@ -247,15 +282,19 @@ const Blog = () => {
 
 const TABS = [
   {
-    title: 'Products',
-    Component: Products
+    title: 'Platform',
+    Component: Platform
+  },
+  {
+    title: 'Teams',
+    Component: Teams
+  },
+  {
+    title: 'Resources',
+    Component: Resources
   },
   {
     title: 'Pricing',
     Component: Pricing
-  },
-  {
-    title: 'Blog',
-    Component: Blog
   }
 ].map((n, idx) => ({ ...n, id: idx + 1 }))
