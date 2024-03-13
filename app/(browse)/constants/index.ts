@@ -95,20 +95,6 @@ export const socials = [
 ]
 export const testimonials = [
   {
-    quote:
-      'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief.',
-    name: 'Charles Dickens',
-    title: 'A Tale of Two Cities',
-    image: 'https://images.unsplash.com/photo-1536611908954-016795a9d9a1'
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune.",
-    name: 'William Shakespeare',
-    title: 'Hamlet',
-    image: 'https://images.unsplash.com/photo-1521227889351-bf6f5b2e4e37'
-  },
-  {
     quote: 'All that we see or seem is but a dream within a dream.',
     name: 'Edgar Allan Poe',
     title: 'A Dream Within a Dream',
