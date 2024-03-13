@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { cn } from '@/utils'
 // UI components from your project
 import { Card, CardContent } from '@/components/ui/card'
-import { Avatar, AvatarImage } from '@/components/ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 // Type definition for props to enhance readability and maintainability
 interface Item {
@@ -82,17 +82,18 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
             className='relative w-[350px] h-[450px] max-w-full shrink-0 rounded-2xl border border-b-0 border-slate-700 px-8 py-6 md:w-[450px] bg-gradient-to-b from-slate-800 to-slate-900'>
             <Card className='w-full h-full p-6 shadow-lg duration-300 ease-in-out hover:shadow-2xl'>
               <CardContent>
-                <blockquote className='text-lg font-semibold italic'>{item.quote}</blockquote>
                 <div className='flex items-center mt-6 space-x-3'>
                   <Avatar>
-                    <AvatarImage alt={item.name} src={item.image} />
+                    <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
+                    <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <div>
                     <div className='font-medium'>{item.name}</div>
                     <div className='text-sm text-gray-600'>{item.title}</div>
-                    <div className='font-bold text-green-600'>Kinsta</div>
+                    <div className='font-bold text-green-600'>BrickAI</div>
                   </div>
                 </div>
+                <blockquote className='text-lg font-semibold italic leading-loose'>“{item.quote}”</blockquote>
               </CardContent>
             </Card>
           </li>
