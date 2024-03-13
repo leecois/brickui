@@ -99,7 +99,7 @@ const Header = () => {
             Sign up for free
           </Button>
 
-          <div className='ml-auto lg:hidden'>
+          <div className='ml-auto lg:hidden '>
             <AnimatedHamburgerButton isOpen={openNavigation} toggle={toggleNavigation} />
           </div>
         </div>
