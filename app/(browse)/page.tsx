@@ -1,19 +1,17 @@
-import React from 'react'
-
 import Footer from './_components/footer'
 import Header from './_components/header'
 import Hero from './_components/hero'
+import Pricing from './_components/pricing'
 import { Testimonials } from './_components/testimonials'
-import { ClipPathLinks } from './_components/clip-path-link'
-import Section from './_components/section'
 
 const Home = () => {
   return (
     <>
-      <div className='overflow-hidden bg-n-8 pt-[4.75rem] lg:pt-[5.25rem]'>
+      <div className='overflow-hidden text-white bg-n-8 pt-[4.75rem] lg:pt-[5.25rem]'>
         <Header />
         <Hero />
         <Testimonials />
+        <Pricing />
         <Footer />
       </div>
     </>
