@@ -36,9 +36,7 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
   const scrollerRef = useRef<HTMLUListElement>(null)
 
   useEffect(() => {
-    duplicateItems()
     applyAnimationSettings()
-    // Enabling start state not needed if its sole purpose is to trigger animations
   }, [])
 
   const duplicateItems = () => {
