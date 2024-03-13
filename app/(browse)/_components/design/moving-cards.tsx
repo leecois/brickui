@@ -72,12 +72,12 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
         {items.concat(items).map((item, index) => (
           <li
             key={`${item.name}-${index}`}
-            className='relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-slate-700 px-8 py-6 md:w-[450px] bg-gradient-to-b from-slate-800 to-slate-900'>
+            className='relative w-[350px] h-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-slate-700 px-8 py-6 md:w-[450px] bg-gradient-to-b from-slate-800 to-slate-900'>
             <Card className='w-full h-full p-6 shadow-lg duration-300 ease-in-out hover:shadow-2xl'>
               <CardContent>
                 <div className='flex items-center mt-6 space-x-3'>
                   <Avatar>
-                    <AvatarImage src={item.image} alt='@shadcn' />
+                    <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <div>
