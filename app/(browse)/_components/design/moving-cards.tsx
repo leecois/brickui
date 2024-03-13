@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 import { cn } from '@/utils'
+import { Card, CardContent } from '@/components/ui/card'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 export const InfiniteMovingCards = ({
   items,
   direction = 'left',
@@ -86,25 +88,24 @@ export const InfiniteMovingCards = ({
               background: 'linear-gradient(180deg, var(--slate-800), var(--slate-900)'
             }}
             key={item.name}>
-
-            <blockquote>
-              <div
-                aria-hidden='true'
-                className='pointer-events-none absolute -left-0.5 -top-0.5 size-[calc(100%_+_4px)]'></div>
-              <span className='relative z-20 text-sm font-normal leading-[1.6] text-stone-100'>
-                {item.quote}
-              </span>
-              <div className='relative z-20 mt-6 flex flex-row items-center'>
-                <span className='flex flex-col gap-1'>
-                  <span className='text-sm font-normal leading-[1.6] text-stone-400'>
-                    {item.name}
-                  </span>
-                  <span className='text-sm font-normal leading-[1.6] text-stone-400'>
-                    {item.title}
-                  </span>
-                </span>
-              </div>
-            </blockquote>
+            <Card className='w-[350px] h-full p-6 shadow-lg  duration-300 ease-in-out hover:shadow-2xl'>
+              <CardContent>
+                <blockquote className='text-lg font-semibold italic'>
+                  {item.quote}
+                </blockquote>
+                <div className='flex items-center mt-6 space-x-3'>
+                  <Avatar>
+                    <AvatarImage alt='Nicole Coetzer' src={item.image} />
+                  
+                  </Avatar>
+                  <div>
+                    <div className='font-medium'>{item.name}</div>
+                    <div className='text-sm text-gray-600'>{item.title}</div>
+                    <div className='font-bold text-green-600'>Kinsta</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </li>
         ))}
       </ul>
