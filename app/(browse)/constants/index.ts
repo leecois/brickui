@@ -119,7 +119,7 @@ export const pricing = [
   {
     id: '0',
     title: 'Free',
-    description: 'AI chatbot, personalized recommendations',
+    description: '',
     price: '0',
     features: [
       'Basic Sequence Automation (2 Sequence Limit)',
@@ -135,7 +135,7 @@ export const pricing = [
   {
     id: '1',
     title: 'Basic',
-    description: 'Advanced AI chatbot, priority support, analytics dashboard',
+    description: 'Per user, per month Billed monthly',
     price: '49',
     features: [
       'Everything in Free plus:',
@@ -151,7 +151,7 @@ export const pricing = [
   {
     id: '2',
     title: 'Professional',
-    description: 'Custom AI chatbot, advanced analytics, dedicated account',
+    description: 'Per user, per month Billed monthly',
     price: '99',
     features: [
       'Everything in Basic plus:',
@@ -170,7 +170,7 @@ export const pricing = [
   {
     id: '3',
     title: 'Organization',
-    description: 'Custom AI chatbot, advanced analytics, dedicated account',
+    description: 'Per user, per month (min 3 users) Annual Billing Only',
     price: '449',
     features: [
       'Everything in Professional plus:',
