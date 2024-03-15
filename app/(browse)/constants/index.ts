@@ -118,35 +118,69 @@ export const testimonials = [
 export const pricing = [
   {
     id: '0',
-    title: 'Basic',
+    title: 'Free',
     description: 'AI chatbot, personalized recommendations',
     price: '0',
     features: [
-      'An AI chatbot that can understand your queries',
-      'Personalized recommendations based on your preferences',
-      'Ability to explore the app and its features without any cost'
+      'Basic Sequence Automation (2 Sequence Limit)',
+      'Buying Intent (3 Intent Topics Limit) & Intent Filters',
+      'AI-Assisted Email Writing (5k words monthly limit)',
+      'LinkedIn Extension',
+      'Send 250 Emails/day',
+      'Gmail Extension',
+      'Deals',
+      'CSV Export'
     ]
   },
   {
     id: '1',
-    title: 'Premium',
+    title: 'Basic',
     description: 'Advanced AI chatbot, priority support, analytics dashboard',
-    price: '9.99',
+    price: '49',
     features: [
-      'An advanced AI chatbot that can understand complex queries',
-      'An analytics dashboard to track your conversations',
-      'Priority support to solve issues quickly'
+      'Everything in Free plus:',
+      'Select 10,000 Records at a Time',
+      'Buying Intent (6 Intent Topics Limit) & Intent Filters',
+      'Job Changes',
+      'Outreach & SalesLoft Integration',
+      'Advanced Filters',
+      'Email Open & Click Tracking',
+      'Advanced Greenhouse Integration (Bi-Directional)'
     ]
   },
   {
     id: '2',
-    title: 'Enterprise',
+    title: 'Professional',
     description: 'Custom AI chatbot, advanced analytics, dedicated account',
-    price: null,
+    price: '99',
     features: [
-      'An AI chatbot that can understand your queries',
-      'Personalized recommendations based on your preferences',
-      'Ability to explore the app and its features without any cost'
+      'Everything in Basic plus:',
+      'No Sequence Limit',
+      'Uncapped Sending Limits with SendGrid',
+      'Advanced Reports & Dashboards (Pre-Built)',
+      'Email Reply & Meeting Tracking',
+      'Integration with All Email Providers',
+      'AI-Assisted Email Writing (300k words monthly limit)',
+      'Manual Tasks',
+      'Call Recordings',
+      'Permission Profiles',
+      'Buying Intent (9 Intent Topics Limit) & Intent Filters'
+    ]
+  },
+  {
+    id: '3',
+    title: 'Organization',
+    description: 'Custom AI chatbot, advanced analytics, dedicated account',
+    price: '449',
+    features: [
+      'Everything in Professional plus:',
+      'Buying Intent (12 Intent Topics Limit) & Intent Filters',
+      'AI-Assisted Email Writing (1M words monthly limit)',
+      'Call Transcriptions, International Dialing & Local Presence',
+      'Customizable Reports',
+      'Login with Single Sign-On (SSO)',
+      'Advanced Security Configurations',
+      'Advanced API Access'
     ]
   }
 ]
