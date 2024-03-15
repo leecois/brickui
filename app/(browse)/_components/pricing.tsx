@@ -16,7 +16,10 @@ const Pricing = () => {
           </div>
         </div>
 
-        <Heading tag='Get started with Brainwave' title='Pay once, use forever' />
+        <Heading
+          tag='Get started with BrickAI'
+          title='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        />
 
         <div className='relative'>
           <SquishyCard />
