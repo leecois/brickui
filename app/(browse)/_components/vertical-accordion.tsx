@@ -1,14 +1,15 @@
 import { Dispatch, SetStateAction, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useWindowSize } from './design/use-window-size'
 import { BarChart, Bell, DollarSign, LucideIcon, Play } from 'lucide-react'
+
+import { useWindowSize } from './design/use-window-size'
 
 const VerticalAccordion = () => {
   const [open, setOpen] = useState(items[0].id)
 
   return (
-    <section className='p-4 bg-indigo-600'>
-      <div className='flex flex-col lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto shadow overflow-hidden'>
+    <section className='bg-indigo-600 p-4'>
+      <div className='mx-auto flex h-fit w-full max-w-6xl flex-col overflow-hidden shadow lg:h-[450px] lg:flex-row'>
         {items.map(item => {
           return (
             <Panel
@@ -45,20 +46,20 @@ const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }: PanelPro
   return (
     <>
       <button
-        className='bg-white hover:bg-slate-50 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group'
+        className='group relative flex flex-row-reverse items-center justify-end gap-4 border-b-DEFAULT border-r-DEFAULT border-slate-200 bg-white p-3 transition-colors hover:bg-slate-50 lg:flex-col'
         onClick={() => setOpen(id)}>
         <span
           style={{
             writingMode: 'vertical-lr'
           }}
-          className='hidden lg:block text-xl font-light rotate-180'>
+          className='hidden rotate-180 text-xl font-light lg:block'>
           {title}
         </span>
-        <span className='block lg:hidden text-xl font-light'>{title}</span>
-        <div className='w-6 lg:w-full aspect-square bg-indigo-600 text-white grid place-items-center'>
+        <span className='block text-xl font-light lg:hidden'>{title}</span>
+        <div className='grid aspect-square w-6 place-items-center bg-indigo-600 text-white lg:w-full'>
           <Icon />
         </div>
-        <span className='w-4 h-4 bg-white group-hover:bg-slate-50 transition-colors border-r-[1px] border-b-[1px] lg:border-b-0 lg:border-t-[1px] border-slate-200 rotate-45 absolute bottom-0 lg:bottom-[50%] right-[50%] lg:right-0 translate-y-[50%] translate-x-[50%] z-20' />
+        <span className='absolute bottom-0 right-[50%] z-20 size-4 translate-x-[50%] translate-y-[50%] rotate-45 border-b-DEFAULT border-r-DEFAULT border-slate-200 bg-white transition-colors group-hover:bg-slate-50 lg:bottom-[50%] lg:right-0 lg:border-b-0 lg:border-t-DEFAULT' />
       </button>
 
       <AnimatePresence>
@@ -74,13 +75,13 @@ const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }: PanelPro
               backgroundPosition: 'center',
               backgroundSize: 'cover'
             }}
-            className='w-full h-full overflow-hidden relative bg-black flex items-end'>
+            className='relative flex size-full items-end overflow-hidden bg-black'>
             <motion.div
               variants={descriptionVariants}
               initial='closed'
               animate='open'
               exit='closed'
-              className='px-4 py-2 bg-black/40 backdrop-blur-sm text-white'>
+              className='bg-black/40 px-4 py-2 text-white backdrop-blur-sm'>
               <p>{description}</p>
             </motion.div>
           </motion.div>

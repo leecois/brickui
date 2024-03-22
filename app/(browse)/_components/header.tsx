@@ -1,8 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { curve } from '@/public/assets'
@@ -72,13 +72,13 @@ const Header = () => {
           variants={navVariants}
           className={`${
             openNavigation ? 'flex' : 'hidden'
-          } fixed inset-x-0 bottom-0 top-[5rem] bg-n-8 lg:hidden lg:mx-auto lg:bg-transparent`}>
+          } fixed inset-x-0 bottom-0 top-20 bg-n-8 lg:mx-auto lg:hidden lg:bg-transparent`}>
           <div className='relative z-2 m-auto flex flex-col items-center justify-center'>
             {navigation.map(item => (
               <div
                 key={item.id}
                 onClick={handleClick}
-                className='relative lg:hidden block p-6 text-2xl uppercase text-n-1 transition-colors hover:text-color-1 md:py-8 xl:px-12'>
+                className='relative block p-6 text-2xl uppercase text-n-1 transition-colors hover:text-color-1 md:py-8 lg:hidden xl:px-12'>
                 {item.title}
               </div>
             ))}
@@ -91,7 +91,7 @@ const Header = () => {
         </div>
 
         <div className='flex items-center'>
-          <Button variant='galaxy' className='hidden lg:flex mr-8'>
+          <Button variant='galaxy' className='mr-8 hidden lg:flex'>
             Log in
           </Button>
 

@@ -1,27 +1,27 @@
 'use client'
 
-import Image from 'next/image'
+import { useRef } from 'react'
 import { ScrollParallax } from 'react-just-parallax'
+import Image from 'next/image'
 
 import { curve, heroBackground, robot } from '@/public/assets'
 
 import { heroIcons } from '../constants'
 
-import CompanyLogos from './company-logos'
-import Section from './section'
-import { SpotlightButton } from './spotlight-button'
 import { BackgroundCircles, BottomLine, Gradient } from './design/hero'
+import { ClipPathLinks } from './clip-path-link'
+import CompanyLogos from './company-logos'
 import Generating from './generating'
 import Notification from './notification'
-import { useRef } from 'react'
-import { ClipPathLinks } from './clip-path-link'
+import Section from './section'
+import { SpotlightButton } from './spotlight-button'
 
 const Hero = () => {
   const parallaxRef = useRef(null)
 
   return (
     <Section
-      className='mt-[-5.25rem] pt-[12rem]'
+      className='mt-[-5.25rem] pt-48'
       crosses
       crossesOffset='lg:translate-y-[5.25rem]'
       customPaddings
@@ -51,10 +51,10 @@ const HeroHeader = () => (
         />
       </span>
     </h1>
-    <p className='mx-auto mb-6 max-w-3xl text-[0.875rem] leading-[1.5rem] text-n-2 md:text-[1rem] md:leading-[1.75rem] lg:mb-8 lg:text-[1.25rem] lg:leading-8'>
+    <p className='mx-auto mb-6 max-w-3xl text-[0.875rem] leading-6 text-n-2 md:text-[1rem] md:leading-7 lg:mb-8 lg:text-[1.25rem] lg:leading-8'>
       Unleash the power of AI within BrickAI. Upgrade your productivity with BrickAI.
     </p>
-    <div className='flex justify-center items-center'>
+    <div className='flex items-center justify-center'>
       <SpotlightButton />
     </div>
   </div>
@@ -63,7 +63,7 @@ const HeroHeader = () => (
 const HeroMainImage = () => (
   <div className='relative mx-auto max-w-[23rem] md:max-w-5xl xl:mb-24'>
     <div className='relative z-1 rounded-2xl bg-conic-gradient p-0.5'>
-      <div className='relative rounded-[1rem] bg-n-8'>
+      <div className='relative rounded-2xl bg-n-8'>
         <div className='h-[1.4rem] rounded-t-[0.9rem] bg-n-10' />
         <HeroImageWithEffects />
       </div>
@@ -78,7 +78,7 @@ const HeroImageWithEffects = () => (
   <div className='aspect-[33/40] overflow-hidden rounded-b-[0.9rem] md:aspect-[688/490] lg:aspect-[1024/490]'>
     <Image
       src={robot}
-      className='w-full translate-y-[8%] scale-[1.7] md:translate-y-[-28%] md:scale-[1]'
+      className='w-full translate-y-[8%] scale-[1.7] md:translate-y-[-28%] md:scale-100'
       width={1024}
       height={490}
       alt='AI'
@@ -98,7 +98,7 @@ const HeroBackgroundImage = () => (
 const HeroIcons = () => (
   <ScrollParallax isAbsolutelyPositioned>
     <ul className='absolute bottom-[7.5rem] left-[-5.5rem] hidden rounded-2xl border border-n-1/10 bg-n-9/40 p-1 backdrop-blur xl:flex'>
-      <li className='p-5 text-white flex gap-10'>
+      <li className='flex gap-10 p-5 text-white'>
         {heroIcons.map((Icon, index) => (
           <Icon.component key={index} />
         ))}
@@ -110,7 +110,7 @@ const HeroIcons = () => (
 const HeroNotification = () => (
   <ScrollParallax isAbsolutelyPositioned>
     <Notification
-      className='absolute bottom-[11rem] right-[-5.5rem] hidden w-[18rem] xl:flex'
+      className='absolute bottom-44 right-[-5.5rem] hidden w-72 xl:flex'
       title='Coffee'
     />
   </ScrollParallax>

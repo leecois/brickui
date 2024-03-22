@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect, useState } from 'react'
-
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, BarChart2, ChevronDown, Home, PieChart } from 'lucide-react'
+
 import VerticalAccordion from '../vertical-accordion'
 
 export const Tabs = () => {
@@ -49,7 +49,7 @@ const Tab = ({
       id={`shift-tab-${tab}`}
       onMouseEnter={() => handleSetSelected(tab)}
       onClick={() => handleSetSelected(tab)}
-      className={`flex items-center gap-1 px-6 py-7.5 font-bold text-md transition-colors ${
+      className={`text-md flex items-center gap-1 px-6 py-7.5 font-bold transition-colors ${
         selected === tab ? ' bg-neutral-800 text-neutral-200' : 'text-neutral-100'
       }`}>
       <span>{children}</span>
@@ -99,7 +99,7 @@ const Content = ({ selected, dir }: { selected: number | null; dir: null | 'l' |
   )
 }
 
-const Bridge = () => <div className='absolute -top-[24px] left-0 right-0 h-[24px]' />
+const Bridge = () => <div className='absolute inset-x-0 -top-[24px] h-[24px]' />
 
 const Nub = ({ selected }: { selected: number | null }) => {
   const [left, setLeft] = useState(0)
@@ -131,7 +131,7 @@ const Nub = ({ selected }: { selected: number | null }) => {
       }}
       animate={{ left }}
       transition={{ duration: 0.25, ease: 'easeInOut' }}
-      className='absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-600 bg-neutral-100'
+      className='absolute left-1/2 top-0 size-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-600 bg-neutral-100'
     />
   )
 }

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import { companyLogos } from '../constants'
+
 import { ClipPathLinks } from './clip-path-link'
 
 const CompanyLogos = ({ className }: { className: string }) => {

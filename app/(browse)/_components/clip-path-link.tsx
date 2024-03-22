@@ -1,12 +1,12 @@
 'use client'
 
+import { MouseEvent } from 'react'
 import { useAnimate } from 'framer-motion'
 import { BrickWall, LucideIcon } from 'lucide-react'
-import { MouseEvent } from 'react'
 
 export const ClipPathLinks = () => {
   return (
-    <div className='divide-y text-white divide-neutral-900 border border-neutral-900'>
+    <div className='divide-y divide-neutral-900 border border-neutral-900 text-white'>
       <div className='grid grid-cols-2 divide-x divide-neutral-900'>
         <LinkBox Icon={BrickWall} href='#' />
         <LinkBox Icon={BrickWall} href='#' />

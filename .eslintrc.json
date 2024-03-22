@@ -19,7 +19,8 @@
   },
   "settings": {
     "tailwindcss": {
-      "callees": ["cn"]
+      "callees": ["cn"],
+      "whitelist": ["notranslate", "fi", "fis", "fi-"]
     }
   }
 }

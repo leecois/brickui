@@ -1,6 +1,6 @@
-import { robot } from '@/public/assets'
 import Image from 'next/image'
 
+import { robot } from '@/public/assets'
 
 export const Rings = () => {
   return (

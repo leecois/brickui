@@ -2,10 +2,9 @@
 
 import React, { useEffect, useRef } from 'react'
 
-import { cn } from '@/utils'
-
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Card, CardContent } from '@/components/ui/card'
+import { cn } from '@/utils'
 
 interface Item {
   quote: string
@@ -62,7 +61,7 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
   )
 
   const scrollerClasses = cn(
-    'flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4 animate-scroll',
+    'flex w-max min-w-full shrink-0 animate-scroll flex-nowrap gap-4 py-4',
     pauseOnHover && 'hover:[animation-play-state:paused]'
   )
 
@@ -72,10 +71,10 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
         {items.concat(items).map((item, index) => (
           <li
             key={`${item.name}-${index}`}
-            className='relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-8 border-slate-700 px-8 py-6 md:w-[450px] bg-gradient-to-b from-slate-800 to-slate-900'>
-            <Card className='w-full h-full text-white border-0 bg-slate-800 p-6 shadow-lg duration-300 ease-in-out'>
+            className='relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-8 border-slate-700 bg-gradient-to-b from-slate-800 to-slate-900 px-8 py-6 md:w-[450px]'>
+            <Card className='size-full border-0 bg-slate-800 p-6 text-white shadow-lg duration-300 ease-in-out'>
               <CardContent>
-                <div className='flex items-center mt-6 space-x-3'>
+                <div className='mt-6 flex items-center space-x-3'>
                   <Avatar>
                     <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
                     <AvatarFallback>CN</AvatarFallback>

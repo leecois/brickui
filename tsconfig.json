@@ -26,8 +26,12 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["./*"],
+      "auth": ["./auth"],
+      "types": ["./types"],
+      "utils": ["./utils"]
+    },
+    "noImplicitAny": false
   },
   "include": [
     ".eslintrc.cjs",

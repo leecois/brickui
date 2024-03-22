@@ -1,9 +1,10 @@
 'use client'
 
-import Section from './section'
-import Meteors from './design/meteors'
 import { testimonials } from '../constants'
+
+import Meteors from './design/meteors'
 import { InfiniteMovingCards } from './design/moving-cards'
+import Section from './section'
 
 export function Testimonials() {
   return (

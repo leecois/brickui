@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const SquishyCard: React.FC = () => {
   return (
@@ -49,7 +49,7 @@ const Card: React.FC = () => {
         </motion.span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, rem. lo</p>
       </div>
-      <button className='absolute bottom-4 left-4 right-4 z-20 rounded border-2 border-white bg-white py-2 text-center font-mono font-black uppercase text-neutral-800 backdrop-blur transition-colors hover:bg-white/30 hover:text-white'>
+      <button className='absolute inset-x-4 bottom-4 z-20 rounded border-2 border-white bg-white py-2 text-center font-mono font-black uppercase text-neutral-800 backdrop-blur transition-colors hover:bg-white/30 hover:text-white'>
         Get it now
       </button>
       <Background />

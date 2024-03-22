@@ -1,9 +1,9 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { socials } from '../constants'
 
 import Section from './section'
-import Link from 'next/link'
 
 const Footer = () => {
   return (
