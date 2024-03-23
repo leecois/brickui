@@ -5,10 +5,10 @@ import Hero from './_components/hero'
 import Pricing from './_components/pricing'
 import { Testimonials } from './_components/testimonials'
 
-const Home = () => {
+export default function Home() {
   return (
-    <>
-      <div className='overflow-hidden  bg-n-8 pt-[4.75rem] lg:pt-[5.25rem]'>
+    <main className='bg-n-8 pt-[4.75rem] lg:pt-[5.25rem]'>
+      <div>
         <Header />
         <Hero />
         <Testimonials />
@@ -16,8 +16,6 @@ const Home = () => {
         {/* <SquishyCard /> */}
         <Footer />
       </div>
-    </>
+    </main>
   )
 }
-
-export default Home

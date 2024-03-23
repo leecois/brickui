@@ -12,6 +12,7 @@ import { navigation } from '../constants'
 
 import { HamburgerMenu } from './design/header'
 import { Tabs } from './design/tabs'
+import { LoginButton } from '@/components/auth/login-button'
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false)
@@ -91,9 +92,11 @@ const Header = () => {
         </div>
 
         <div className='flex items-center'>
-          <Button variant='galaxy' className='mr-8 hidden lg:flex'>
-            Log in
-          </Button>
+          <LoginButton>
+            <Button variant='galaxy' className='mr-8 hidden lg:flex'>
+              Log in
+            </Button>
+          </LoginButton>
 
           <Button variant='secondary' className='hidden lg:flex'>
             Sign up for free
