@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
+import { LoginButton } from '@/components/auth/login-button'
 import { Button } from '@/components/ui/button'
 import { curve } from '@/public/assets'
 import { AnimatedHamburgerButton } from '@/public/assets/svg/MenuSvg'
@@ -12,7 +13,6 @@ import { navigation } from '../constants'
 
 import { HamburgerMenu } from './design/header'
 import { Tabs } from './design/tabs'
-import { LoginButton } from '@/components/auth/login-button'
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false)

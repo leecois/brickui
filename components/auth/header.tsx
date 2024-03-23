@@ -1,5 +1,6 @@
-import { cn } from '@/utils'
 import { Poppins } from 'next/font/google'
+
+import { cn } from '@/utils'
 
 const font = Poppins({
   subsets: ['latin'],
@@ -12,9 +13,9 @@ interface HeaderProps {
 
 export const Header = ({}: HeaderProps) => {
   return (
-    <div className='w-full flex flex-col gap-y-4 items-center justify-center'>
+    <div className='flex w-full flex-col items-center justify-center gap-y-4'>
       <h1 className={cn('text-3xl font-semibold', font.className)}>Auth</h1>
-      <p className='text-muted-foreground text-sm'>Welcome Back</p>
+      <p className='text-sm text-muted-foreground'>Welcome Back</p>
     </div>
   )
 }
