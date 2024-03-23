@@ -59,7 +59,7 @@ const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }: PanelPro
         <div className='grid aspect-square w-6 place-items-center bg-indigo-600 text-white lg:w-full'>
           <Icon />
         </div>
-        <span className='absolute bottom-0 right-[50%] z-20 size-4 translate-x-[50%] translate-y-[50%] rotate-45 border-b-DEFAULT border-r-DEFAULT border-slate-200 bg-white transition-colors group-hover:bg-slate-50 lg:bottom-[50%] lg:right-0 lg:border-b-0 lg:border-t-DEFAULT' />
+        <span className='absolute bottom-0 right-1/2 z-20 size-4 translate-x-1/2 translate-y-1/2 rotate-45 border-b-DEFAULT border-r-DEFAULT border-slate-200 bg-white transition-colors group-hover:bg-slate-50 lg:bottom-1/2 lg:right-0 lg:border-b-0 lg:border-t-DEFAULT' />
       </button>
 
       <AnimatePresence>

@@ -35,7 +35,7 @@ export const SpotlightButton = () => {
       <span className='pointer-events-none relative z-10 mix-blend-difference'>Get Started!</span>
       <span
         ref={spanRef}
-        className='pointer-events-none absolute left-[50%] top-[50%] size-32 -translate-x-[50%] -translate-y-[50%] rounded-full bg-slate-100'
+        className='pointer-events-none absolute left-1/2 top-1/2 size-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-slate-100'
       />
     </motion.button>
   )

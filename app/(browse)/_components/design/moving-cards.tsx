@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Card, CardContent } from '@/components/ui/card'
@@ -31,21 +31,7 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
   const containerRef = useRef<HTMLDivElement>(null)
   const scrollerRef = useRef<HTMLUListElement>(null)
 
-  useEffect(() => {
-    applyAnimationSettings()
-  }, [])
-
-  const duplicateItems = () => {
-    const scroller = scrollerRef.current
-    if (scroller) {
-      scroller.childNodes.forEach(child => {
-        const clone = child.cloneNode(true)
-        scroller.appendChild(clone)
-      })
-    }
-  }
-
-  const applyAnimationSettings = () => {
+  const applyAnimationSettings = useCallback(() => {
     const container = containerRef.current
     if (container) {
       const directionValue = direction === 'left' ? 'normal' : 'reverse'
@@ -54,7 +40,22 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
       container.style.setProperty('--animation-direction', directionValue)
       container.style.setProperty('--animation-duration', durationValue)
     }
-  }
+  }, [direction, speed])
+
+  useEffect(() => {
+    applyAnimationSettings()
+  }, [applyAnimationSettings])
+
+  // const duplicateItems = () => {
+  //   const scroller = scrollerRef.current
+  //   if (scroller) {
+  //     scroller.childNodes.forEach(child => {
+  //       const clone = child.cloneNode(true)
+  //       scroller.appendChild(clone)
+  //     })
+  //   }
+  // }
+
   const containerClasses = cn(
     'relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
     className

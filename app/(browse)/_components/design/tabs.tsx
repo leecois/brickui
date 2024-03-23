@@ -49,7 +49,7 @@ const Tab = ({
       id={`shift-tab-${tab}`}
       onMouseEnter={() => handleSetSelected(tab)}
       onClick={() => handleSetSelected(tab)}
-      className={`text-md flex items-center gap-1 px-6 py-7.5 font-bold transition-colors ${
+      className={`flex items-center gap-1 px-6 py-7.5 text-base font-bold transition-colors ${
         selected === tab ? ' bg-neutral-800 text-neutral-200' : 'text-neutral-100'
       }`}>
       <span>{children}</span>
@@ -99,7 +99,7 @@ const Content = ({ selected, dir }: { selected: number | null; dir: null | 'l' |
   )
 }
 
-const Bridge = () => <div className='absolute inset-x-0 -top-[24px] h-[24px]' />
+const Bridge = () => <div className='absolute inset-x-0 top-[-24px] h-[24px]' />
 
 const Nub = ({ selected }: { selected: number | null }) => {
   const [left, setLeft] = useState(0)
