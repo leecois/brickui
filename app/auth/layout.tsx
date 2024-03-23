@@ -12,8 +12,8 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
 
       <div className='z-10 flex items-center justify-center md:col-span-2'>{children}</div>
 
-      <div className='relative -z-1 hidden md:col-span-1 md:block'>
-        <Image src={robot2} layout='fill' objectFit='cover' alt='Additional Background' />
+      <div className='relative -z-1 hidden md:col-span-1 md:block '>
+        <Image src={robot2} layout='fill' objectFit='cover' alt='Background' />
       </div>
     </div>
   )
