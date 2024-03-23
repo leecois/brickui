@@ -136,17 +136,17 @@ const Nub = ({ selected }: { selected: number | null }) => {
   )
 }
 
-const Platform = () => {
-  return (
-    <div>
-      <VerticalAccordion />
-      <button className='ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300'>
-        <span>View more</span>
-        <ArrowRight />
-      </button>
-    </div>
-  )
-}
+// const Platform = () => {
+//   return (
+//     <div>
+//       <VerticalAccordion />
+//       <button className='ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300'>
+//         <span>View more</span>
+//         <ArrowRight />
+//       </button>
+//     </div>
+//   )
+// }
 
 const Teams = () => {
   return (
@@ -211,10 +211,10 @@ const Pricing = () => {
 }
 
 const TABS = [
-  {
-    title: 'Platform',
-    Component: Platform
-  },
+  // {
+  //   title: 'Platform',
+  //   Component: Platform
+  // },
   {
     title: 'Teams',
     Component: Teams
