@@ -61,12 +61,7 @@ export const LoginForm = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input
-                      {...field}
-                      disabled={isPending}
-                      placeholder='brick.ai@example.com'
-                      type='email'
-                    />
+                    <Input {...field} disabled={isPending} placeholder='Work Email' type='email' />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -79,7 +74,12 @@ export const LoginForm = () => {
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input {...field} disabled={isPending} placeholder='******' type='password' />
+                    <Input
+                      {...field}
+                      disabled={isPending}
+                      placeholder='Enter your password'
+                      type='password'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -10,6 +10,8 @@ import stars from './pricing/stars.svg'
 import smallSphere from './4-small.png'
 import gradient from './gradient.png'
 import loading from './loading.png'
+import robot2 from './robot2.jpg'
+import scene from './scene.svg'
 
 export {
   curve,
@@ -22,6 +24,8 @@ export {
   notification3,
   notification4,
   robot,
+  robot2,
+  scene,
   smallSphere,
   stars
 }

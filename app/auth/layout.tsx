@@ -1,10 +1,20 @@
 import React from 'react'
+import Image from 'next/image'
+
+import { robot2, scene } from '@/public/assets'
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='flex'>
-      <div className='flex h-screen w-2/3 items-center justify-center'>{children}</div>
-      <div className="flex w-1/2 bg-[url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80')] bg-cover bg-center" />
+    <div className='relative grid h-screen grid-cols-1 md:grid-cols-3'>
+      <div className='absolute inset-0 -z-1'>
+        <Image src={scene} layout='fill' objectFit='cover' alt='Background' />
+      </div>
+
+      <div className='z-10 flex items-center justify-center md:col-span-2'>{children}</div>
+
+      <div className='relative -z-1 hidden md:col-span-1 md:block'>
+        <Image src={robot2} layout='fill' objectFit='cover' alt='Additional Background' />
+      </div>
     </div>
   )
 }
