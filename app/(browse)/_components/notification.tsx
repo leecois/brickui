@@ -4,7 +4,12 @@ import { notification1 } from '@/public/assets'
 
 import { notificationImages } from '../constants'
 
-const Notification = ({ className, title }: { className: string; title: string }) => {
+interface NotificationProps {
+  className: string
+  title: string
+}
+
+const Notification = ({ className, title }: NotificationProps) => {
   return (
     <div
       className={`${

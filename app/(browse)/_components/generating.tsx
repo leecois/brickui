@@ -2,7 +2,11 @@ import Image from 'next/image'
 
 import { loading } from '@/public/assets'
 
-const Generating = ({ className }: { className: String }) => {
+interface GeneratingProps {
+  className: string
+}
+
+const Generating = ({ className }: GeneratingProps) => {
   return (
     <div
       className={`flex h-14 items-center rounded-[1.7rem] bg-n-8/80 px-6  ${

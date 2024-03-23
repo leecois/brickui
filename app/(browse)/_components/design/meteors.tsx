@@ -5,7 +5,7 @@ export interface MeteorsProps {
   className?: string
 }
 
-const Meteors: React.FC<MeteorsProps> = ({ number = 20, className }) => {
+const Meteors = ({ number = 20, className }: MeteorsProps) => {
   const meteors = new Array(number).fill(true)
 
   return (

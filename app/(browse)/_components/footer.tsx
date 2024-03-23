@@ -7,7 +7,7 @@ import Section from './section'
 
 const Footer = () => {
   return (
-    <Section crosses className='!px-0 !py-10'>
+    <Section customPaddings='animate' crosses className='!px-0 !py-10'>
       <div className='container flex items-center justify-center gap-10 max-sm:flex-col sm:justify-between'>
         <p className=' text-n-4 lg:block'>© {new Date().getFullYear()}. All rights reserved.</p>
 
@@ -17,8 +17,8 @@ const Footer = () => {
               key={item.id}
               href={item.url}
               target='_blank'
-              className='flex size-10 items-center justify-center rounded-full bg-n-7 transition-colors hover:bg-n-6'>
-              <Image src={item.iconUrl} width={16} height={16} alt={item.title} />
+              className='flex size-10 items-center justify-center rounded-full bg-n-7 text-white transition-colors hover:bg-n-6'>
+              <item.iconUrl />
             </Link>
           ))}
         </ul>

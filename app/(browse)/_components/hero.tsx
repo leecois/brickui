@@ -100,7 +100,7 @@ const HeroIcons = () => (
     <ul className='absolute bottom-[7.5rem] left-[-5.5rem] hidden rounded-2xl border border-n-1/10 bg-n-9/40 p-1 backdrop-blur xl:flex'>
       <li className='flex gap-10 p-5 text-white'>
         {heroIcons.map((Icon, index) => (
-          <Icon.component key={index} />
+          <Icon.icon key={index} />
         ))}
       </li>
     </ul>

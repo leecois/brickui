@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const SquishyCard: React.FC = () => {
+const SquishyCard = () => {
   return (
     <section className='bg-neutral-900 px-4 py-12'>
       <div className='mx-auto w-fit'>

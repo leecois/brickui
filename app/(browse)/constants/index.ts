@@ -1,95 +1,78 @@
+import { FaDiscord, FaFacebook, FaInstagram, FaTelegram, FaTwitter } from 'react-icons/fa'
 import { FileText, Home, PlusSquare, Search } from 'lucide-react'
 
-import {
-  discordBlack,
-  facebook,
-  instagram,
-  logo,
-  notification2,
-  notification3,
-  notification4,
-  telegram,
-  twitter
-} from '@/public/assets'
+import { notification2, notification3, notification4 } from '@/public/assets'
 
 export const navigation = [
   {
     id: '0',
-    title: 'Platform',
-    url: '#features',
-    onlyMobile: true
-  },
-  {
-    id: '1',
     title: 'Pricing',
     url: '#pricing',
     onlyMobile: true
   },
   {
-    id: '2',
+    id: '1',
     title: 'Teams',
-    url: '#how-to-use',
+    url: '#teams',
     onlyMobile: true
   },
   {
-    id: '3',
+    id: '2',
     title: 'Roadmap',
     url: '#roadmap',
     onlyMobile: true
   },
   {
-    id: '4',
+    id: '3',
     title: 'New account',
-    url: '#signup',
+    url: '/auth/register',
     onlyMobile: true
   },
   {
-    id: '5',
+    id: '4',
     title: 'Sign in',
-    url: '#login',
+    url: '/auth/sign-in',
     onlyMobile: true
   }
 ]
 
 export const heroIcons = [
-  { name: 'Home', component: Home },
-  { name: 'FileText', component: FileText },
-  { name: 'Search', component: Search },
-  { name: 'PlusSquare', component: PlusSquare }
+  { name: 'Home', icon: Home },
+  { name: 'FileText', icon: FileText },
+  { name: 'Search', icon: Search },
+  { name: 'PlusSquare', icon: PlusSquare }
 ]
 export const notificationImages = [notification4, notification3, notification2]
-
-export const companyLogos = [logo, logo, logo, logo, logo]
 
 export const socials = [
   {
     id: '0',
     title: 'Discord',
-    iconUrl: discordBlack,
+    iconUrl: FaDiscord,
     url: '#'
   },
   {
     id: '1',
     title: 'Twitter',
-    iconUrl: twitter,
+    iconUrl: FaTwitter,
     url: '#'
   },
   {
     id: '2',
     title: 'Instagram',
-    iconUrl: instagram,
+    iconUrl: FaInstagram,
     url: '#'
   },
   {
     id: '3',
     title: 'Telegram',
-    iconUrl: telegram,
+    iconUrl: FaTelegram,
     url: '#'
   },
   {
     id: '4',
     title: 'Facebook',
-    iconUrl: facebook,
+    iconUrl: FaFacebook,
     url: '#'
   }
 ]

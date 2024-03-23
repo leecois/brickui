@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from 'react'
+import React, { ReactNode, useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, BarChart2, ChevronDown, Home, PieChart } from 'lucide-react'
 
@@ -99,30 +99,29 @@ const Content = ({ selected, dir }: { selected: number | null; dir: null | 'l' |
   )
 }
 
-const Bridge = () => <div className='absolute inset-x-0 top-[-24px] h-[24px]' />
+const Bridge = () => <div className='absolute inset-x-0 top-[24px] h-[24px]' />
 
 const Nub = ({ selected }: { selected: number | null }) => {
   const [left, setLeft] = useState(0)
 
-  useEffect(() => {
-    moveNub()
+  const calculateNubPosition = useCallback(() => {
+    if (selected === null) return
+
+    const hoveredTab = document.getElementById(`shift-tab-${selected}`)
+    const overlayContent = document.getElementById('overlay-content')
+
+    if (!hoveredTab || !overlayContent) return
+
+    const tabRect = hoveredTab.getBoundingClientRect()
+    const contentLeft = overlayContent.getBoundingClientRect().left
+
+    const tabCenter = tabRect.left + tabRect.width / 2 - contentLeft
+    setLeft(tabCenter)
   }, [selected])
 
-  const moveNub = () => {
-    if (selected) {
-      const hoveredTab = document.getElementById(`shift-tab-${selected}`)
-      const overlayContent = document.getElementById('overlay-content')
-
-      if (!hoveredTab || !overlayContent) return
-
-      const tabRect = hoveredTab.getBoundingClientRect()
-      const { left: contentLeft } = overlayContent.getBoundingClientRect()
-
-      const tabCenter = tabRect.left + tabRect.width / 2 - contentLeft
-
-      setLeft(tabCenter)
-    }
-  }
+  useEffect(() => {
+    calculateNubPosition()
+  }, [calculateNubPosition, selected])
 
   return (
     <motion.span

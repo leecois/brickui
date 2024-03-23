@@ -21,13 +21,13 @@ interface InfiniteMovingCardsProps {
   className?: string
 }
 
-export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
+export const InfiniteMovingCards = ({
   items,
   direction = 'left',
   speed = 'fast',
   pauseOnHover = true,
   className = ''
-}) => {
+}: InfiniteMovingCardsProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const scrollerRef = useRef<HTMLUListElement>(null)
 

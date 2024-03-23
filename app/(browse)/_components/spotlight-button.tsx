@@ -2,28 +2,35 @@ import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 export const SpotlightButton = () => {
-  const btnRef = useRef<HTMLButtonElement | null>(null)
-  const spanRef = useRef<HTMLSpanElement | null>(null)
+  const btnRef = useRef<HTMLButtonElement>(null)
+  const spanRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const { width } = (e.target as HTMLElement)?.getBoundingClientRect()
+      if (!(e.target instanceof HTMLElement)) return
+
+      const { width } = e.target.getBoundingClientRect()
       const offset = e.offsetX
       const left = `${(offset / width) * 100}%`
 
-      spanRef.current!.animate({ left }, { duration: 250, fill: 'forwards' })
+      spanRef.current?.animate({ left }, { duration: 250, fill: 'forwards' })
     }
 
     const handleMouseLeave = () => {
-      spanRef.current!.animate({ left: '50%' }, { duration: 100, fill: 'forwards' })
+      spanRef.current?.animate({ left: '50%' }, { duration: 100, fill: 'forwards' })
     }
 
-    btnRef?.current?.addEventListener('mousemove', handleMouseMove)
-    btnRef?.current?.addEventListener('mouseleave', handleMouseLeave)
+    const btn = btnRef.current
+    if (btn) {
+      btn.addEventListener('mousemove', handleMouseMove)
+      btn.addEventListener('mouseleave', handleMouseLeave)
+    }
 
     return () => {
-      btnRef?.current?.removeEventListener('mousemove', handleMouseMove)
-      btnRef?.current?.removeEventListener('mouseleave', handleMouseLeave)
+      if (btn) {
+        btn.removeEventListener('mousemove', handleMouseMove)
+        btn.removeEventListener('mouseleave', handleMouseLeave)
+      }
     }
   }, [])
 

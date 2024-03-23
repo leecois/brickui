@@ -1,10 +1,10 @@
-import Image from 'next/image'
-
-import { companyLogos } from '../constants'
-
 import { ClipPathLinks } from './clip-path-link'
 
-const CompanyLogos = ({ className }: { className: string }) => {
+interface CompanyLogosProps {
+  className: string
+}
+
+const CompanyLogos = ({ className }: CompanyLogosProps) => {
   return (
     <div className={className}>
       <h5 className='mb-6 text-center text-n-1/50'>

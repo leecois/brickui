@@ -1,5 +1,5 @@
-import { MotionConfig, motion } from 'framer-motion'
 import React from 'react'
+import { motion, MotionConfig } from 'framer-motion'
 
 interface AnimatedHamburgerButtonProps {
   isOpen: boolean
