@@ -55,7 +55,7 @@
     "flag-icons": "latest",
     "framer-motion": "latest",
     "input-otp": "latest",
-    "jotai": "latest",
+    "jotai": "^2.7.1",
     "lucide-react": "latest",
     "next": "latest",
     "next-auth": "beta",

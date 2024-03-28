@@ -4,7 +4,6 @@ import { BackButton } from '@/components/auth/back-button'
 import { Header } from '@/components/auth/header'
 import { Social } from '@/components/auth/social'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
 
 interface CardWrapperProps {
   children: React.ReactNode

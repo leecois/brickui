@@ -1,3 +1,4 @@
+import Canvas from './_components/canvas'
 import SquishyCard from './_components/design/pricing-card'
 import Footer from './_components/footer'
 import Header from './_components/header'
@@ -14,6 +15,7 @@ export default function Home() {
         <Testimonials />
         <Pricing />
         {/* <SquishyCard /> */}
+        <Canvas />
         <Footer />
       </div>
     </main>
